@@ -24,6 +24,6 @@
 void uzee_print(const char *information);
 void show_prompt(void);
 void scan_command(char *command, size_t size);
-void process_command(const char *command);
+void execute_command(const char *command);
 
 #endif /* SHELL_H */

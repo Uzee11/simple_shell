@@ -10,14 +10,14 @@ char *strtok(char *str, const char *delim);
 void uzee_print(const char *information);
 
 /**
- * process_command - Execute a shell command.
+ * execute_command - Execute a shell command.
  * @command: The command to be executed.
  *
  * This function forks a new process and uses execvp to execute
  * the specified command in the child process. It also tokenizes
  * the command string to prepare the arguments for execvp.
  */
-void process_command(const char *command)
+void execute_command(const char *command)
 {
 /* Fork a new process */
 pid_t child_pid = fork();

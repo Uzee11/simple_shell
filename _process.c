@@ -6,13 +6,13 @@
 #include <string.h>
 
 /**
- * process_command - Execute a shell command.
+ * execute_command - Execute a shell command.
  * @command: The command to be executed.
  *
  * This function forks a new process and uses execve to execute
  * the specified command in the child process.
  */
-void process_command(const char *command)
+void execute_command(const char *command)
 {
 /* Fork a new process */
 pid_t child_pid = fork();

@@ -4,7 +4,7 @@
 /* Declarations for functions used in main */
 void show_prompt(void);
 void scan_command(char *command, size_t size);
-void process_command(const char *command);
+void execute_command(const char *command);
 
 /**
  * main - The main function for the shell.
@@ -21,7 +21,7 @@ while (1)
 {
 show_prompt(); /* Display the shell prompt */
 scan_command(command, sizeof(command)); /* Read user input */
-process_command(command); /* Execute the user's command */
+execute_command(command); /* Execute the user's command */
 }
 
 return (0); /* Successful completion */
