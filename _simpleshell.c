@@ -3,16 +3,22 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include "shell.h"
+
+/* Function declarations */
+void display_prompt();
+void uzee_print(const char *information);
+void execute_command(const char *command);
 
 #define MAX_COMMAND_LENGTH 100
 
 void show_prompt()
 {
 write("uzee_print$ ");
-uzee_write(prompt);
+uzee_print(prompt);
 fflush(stdout);
 }
-void uzee_write(const char *information) 
+void uzee_print(const char *information)
 {
 write(STDOUT_FILENO, information, strlen(information));
 }
